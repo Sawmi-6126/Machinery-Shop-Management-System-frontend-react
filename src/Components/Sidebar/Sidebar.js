@@ -45,18 +45,10 @@ function Sidebar() {
             component="div"
             sx={{ flexGrow: 1 }}
             color="primary"
-            padding={3}
+            padding={2}
           >
             Repair Management System
           </Typography>
-
-          {/* <Button color="info" href="/login">
-            Login
-          </Button>
-
-          <Button color="info" href="/signup">
-            Signup
-          </Button> */}
 
           {auth && (
             <div>
