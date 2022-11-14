@@ -8,6 +8,8 @@ import Parts from "./Pages/Parts/Parts";
 import Repair from "./Pages/Repair/Repair";
 import Technician from "./Pages/Technician/Technician";
 import AddCustomer from "./Pages/Customer/AddCustomer";
+import Signin from "./Pages/Login/Signin";
+import LandingPage from "./Pages/LandingPage/LandingPage";
 
 function App() {
   return (
@@ -16,13 +18,15 @@ function App() {
         <Router>
           <Sidebar />
           <Routes>
-            <Route path="/" exact element={<Dashboard />} />
+            <Route path="/" exact element={<LandingPage />} />
+            <Route path="/signin" exact element={<Signin />} />
+            <Route path="/dashboard" exact element={<Dashboard />} />
             <Route exact path="/customer" element={<Customer />} />
             <Route exact path="/addcustomer" element={<AddCustomer />} />
-            <Route path="machine" element={<Machine />} />
-            <Route path="parts" element={<Parts />} />
-            <Route path="repair" element={<Repair />} />
-            <Route path="technician" element={<Technician />} />
+            <Route path="/machine" element={<Machine />} />
+            <Route path="/parts" element={<Parts />} />
+            <Route path="/repair" element={<Repair />} />
+            <Route path="/technician" element={<Technician />} />
           </Routes>
         </Router>
       </div>

@@ -34,7 +34,10 @@ function Sidebar() {
             Repair Management System
           </Typography>
           <Button color="info" onClick={navigateToSignin}>
-            Logout
+            Login
+          </Button>
+          <Button color="info" onClick={navigateToSignin}>
+            Signup
           </Button>
         </div>
 
