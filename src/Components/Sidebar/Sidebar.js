@@ -7,8 +7,6 @@ import "./Sidebar.css";
 import { IconContext } from "react-icons";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import Login from "../../Pages/Login/Login";
-import Signin from "../../Pages/Login/Signin";
 
 function Sidebar() {
   const [sidebar, setSidebar] = useState(false);

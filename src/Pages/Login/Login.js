@@ -14,7 +14,7 @@ function Login() {
       <div className="form-container">
         <form className="form">
           <div className="form-content">
-            <h3 className="Auth-form-title">Sign In</h3>
+            <h3 className="form-title">Sign In</h3>
             <div className="form-group mt-3">
               <label>Email address</label>
               <input

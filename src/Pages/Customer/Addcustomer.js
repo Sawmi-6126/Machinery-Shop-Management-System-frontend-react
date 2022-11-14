@@ -1,21 +1,71 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import "./Customer.css";
+import * as MdIcons from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
-function Addcustomer() {
+function AddCustomer() {
+  const navigate = useNavigate();
+
+  const navigateToCustomer = () => {
+    navigate("/customer");
+  };
+
   return (
-    <div>
-      <Form>
-        <Form.Group className="mb-3" controlId="formGroupEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formGroupPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-      </Form>
+    <div className="form-content">
+      <section className="section">
+        <div className="col-md-6">
+          <h5>
+            <MdIcons.MdPersonAddAlt1 /> &nbsp;
+            <b>Add New Customer</b>
+          </h5>
+          <hr />
+        </div>
+        <Form>
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Label>First Name</Form.Label>
+              <Form.Control type="email" placeholder="Sawmika" />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formGridPassword">
+              <Form.Label>Last Name</Form.Label>
+              <Form.Control type="password" placeholder="Suthakaran" />
+            </Form.Group>
+          </Row>
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Label>Mobile No.</Form.Label>
+              <Form.Control type="email" placeholder="07x xxxxxxx" />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formGridPassword">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="password" placeholder="abc@gmail.com" />
+            </Form.Group>
+          </Row>
+          <Form.Group className="mb-3" controlId="formGridAddress2">
+            <Form.Label>Address </Form.Label>
+            <Form.Control placeholder="Enter address here." />
+          </Form.Group>
+          <Button variant="primary" type="submit" onClick={navigateToCustomer}>
+            Submit
+          </Button>
+          &nbsp;
+          <Button
+            variant="secondary"
+            type="submit"
+            onClick={navigateToCustomer}
+          >
+            Cancel
+          </Button>
+        </Form>
+      </section>
     </div>
   );
 }
 
-export default Addcustomer;
+export default AddCustomer;

@@ -8,13 +8,13 @@ import * as MdIcons from "react-icons/md";
 export const SidebarData = [
   {
     title: "Dashboard",
-    path: "dashboard",
+    path: "/",
     icon: <FaIcons.FaTachometerAlt />,
     cName: "nav-text",
   },
   {
     title: "Customer",
-    path: "/",
+    path: "customer",
     icon: <IoIcons.IoMdPeople />,
     cName: "nav-text",
   },
