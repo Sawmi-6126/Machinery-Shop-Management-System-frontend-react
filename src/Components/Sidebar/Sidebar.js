@@ -14,7 +14,11 @@ function Sidebar() {
 
   const navigate = useNavigate();
   const navigateToSignin = () => {
-    navigate("/signin");
+    navigate("/login");
+  };
+
+  const navigateToSignup = () => {
+    navigate("/signup");
   };
 
   return (
@@ -36,7 +40,7 @@ function Sidebar() {
           <Button color="info" onClick={navigateToSignin}>
             Login
           </Button>
-          <Button color="info" onClick={navigateToSignin}>
+          <Button color="info" onClick={navigateToSignup}>
             Signup
           </Button>
         </div>

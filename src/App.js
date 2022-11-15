@@ -8,8 +8,8 @@ import Parts from "./Pages/Parts/Parts";
 import Repair from "./Pages/Repair/Repair";
 import Technician from "./Pages/Technician/Technician";
 import AddCustomer from "./Pages/Customer/AddCustomer";
-import Signin from "./Pages/Login/Signin";
 import LandingPage from "./Pages/LandingPage/LandingPage";
+import Signup from "./Pages/Login/Signup";
 
 function App() {
   return (
@@ -20,9 +20,10 @@ function App() {
           <Routes>
             <Route path="/" exact element={<LandingPage />} />
             <Route path="/signin" exact element={<Signin />} />
+            <Route path="/signup" exact element={<Signup />} />
             <Route path="/dashboard" exact element={<Dashboard />} />
-            <Route exact path="/customer" element={<Customer />} />
-            <Route exact path="/addcustomer" element={<AddCustomer />} />
+            <Route path="/customer" element={<Customer />} />
+            <Route path="/addcustomer" element={<AddCustomer />} />
             <Route path="/machine" element={<Machine />} />
             <Route path="/parts" element={<Parts />} />
             <Route path="/repair" element={<Repair />} />
