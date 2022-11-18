@@ -9,9 +9,9 @@ const LandingPage = () => {
         src={tools}
         alt="Tools"
         className="tools"
-        width={1000}
-        height={500}
+        style={{ width: "100%", height: "625px" }}
       />
+      <div class="name">Green House Trading Company</div>
     </div>
   );
 };

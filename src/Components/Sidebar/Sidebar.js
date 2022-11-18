@@ -14,7 +14,7 @@ function Sidebar() {
 
   const navigate = useNavigate();
   const navigateToSignin = () => {
-    navigate("/login");
+    navigate("/signin");
   };
 
   const navigateToSignup = () => {

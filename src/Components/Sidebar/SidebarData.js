@@ -20,7 +20,7 @@ export const SidebarData = [
   },
   {
     title: "Machine",
-    path: "/",
+    path: "machine",
     icon: <FaIcons.FaTools />,
     cName: "nav-text",
   },
@@ -32,7 +32,7 @@ export const SidebarData = [
   },
   {
     title: "Parts Pool",
-    path: "/",
+    path: "parts",
     icon: <FaIcons.FaToolbox />,
     cName: "nav-text",
   },

@@ -11,6 +11,9 @@ function Customer() {
   const navigateToAddNewCustomer = () => {
     navigate("/addcustomer");
   };
+  const navigateToUpdateCustomer = () => {
+    navigate("/updatecustomer");
+  };
 
   return (
     <div className="page-content">
@@ -18,13 +21,13 @@ function Customer() {
         <div className="col-md-6">
           <h5>
             <MdIcons.MdPerson /> &nbsp;
-            <b> Customer</b>
+            <b> Customers</b>
           </h5>
           <hr></hr>
         </div>
         <div className="components">
           <Button variant="contained" onClick={navigateToAddNewCustomer}>
-            <MdIcons.MdPersonAddAlt1 />
+            <MdIcons.MdAdd />
             Add New Customer
           </Button>
         </div>
@@ -42,6 +45,101 @@ function Customer() {
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>0712548789</td>
+                <td>abc@gmail.com</td>
+                <td>hgfdsdfgh</td>
+                <td>
+                  <Button
+                    variant="contained"
+                    onClick={navigateToUpdateCustomer}
+                  >
+                    <MdIcons.MdCreate />
+                  </Button>{" "}
+                  &nbsp;
+                  <Button
+                    style={{
+                      padding: "5px",
+                      backgroundColor: "red",
+                    }}
+                    variant=""
+                  >
+                    <MdIcons.MdDelete />
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>0712548789</td>
+                <td>abc@gmail.com</td>
+                <td>hgfdsdfgh</td>
+                <td>
+                  <Button variant="contained">
+                    <MdIcons.MdCreate />
+                  </Button>{" "}
+                  &nbsp;
+                  <Button
+                    style={{
+                      padding: "5px",
+                      backgroundColor: "red",
+                    }}
+                    variant=""
+                  >
+                    <MdIcons.MdDelete />
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>0712548789</td>
+                <td>abc@gmail.com</td>
+                <td>hgfdsdfgh</td>
+                <td>
+                  <Button variant="contained">
+                    <MdIcons.MdCreate />
+                  </Button>{" "}
+                  &nbsp;
+                  <Button
+                    style={{
+                      padding: "5px",
+                      backgroundColor: "red",
+                    }}
+                    variant=""
+                  >
+                    <MdIcons.MdDelete />
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>0712548789</td>
+                <td>abc@gmail.com</td>
+                <td>hgfdsdfgh</td>
+                <td>
+                  <Button variant="contained">
+                    <MdIcons.MdCreate />
+                  </Button>{" "}
+                  &nbsp;
+                  <Button
+                    style={{
+                      padding: "5px",
+                      backgroundColor: "red",
+                    }}
+                    variant=""
+                  >
+                    <MdIcons.MdDelete />
+                  </Button>
+                </td>
+              </tr>
               <tr>
                 <td>1</td>
                 <td>Mark</td>
