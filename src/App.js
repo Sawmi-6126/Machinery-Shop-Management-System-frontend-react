@@ -13,19 +13,20 @@ import AddParts from "./Pages/Parts/AddParts";
 import UpdateParts from "./Pages/Parts/UpdateParts";
 import Repair from "./Pages/Repair/Repair";
 import Technician from "./Pages/Technician/Technician";
+import AddTechnician from "./Pages/Technician/AddTechnician";
+import UpdateTechnician from "./Pages/Technician/UpdateTechnician";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import Signup from "./Pages/Login/Signup";
 import Signin from "./Pages/Login/Signin";
 
 function App() {
-  // const [showNav, setShowNav- = useState(true);
   return (
     <div>
       <div>
         <Router>
           <Sidebar />
           <Routes>
-            <Route path="/" exact element={<LandingPage />} />
+            <Route path="/" element={<LandingPage />} />
             <Route path="/signin" exact element={<Signin />} />
             <Route path="/signup" exact element={<Signup />} />
             <Route path="/dashboard" exact element={<Dashboard />} />
@@ -40,6 +41,8 @@ function App() {
             <Route path="/updateparts" element={<UpdateParts />} />
             <Route path="/repair" element={<Repair />} />
             <Route path="/technician" element={<Technician />} />
+            <Route path="/addtechnician" element={<AddTechnician />} />
+            <Route path="/updatetechnician" element={<UpdateTechnician />} />
           </Routes>
         </Router>
       </div>

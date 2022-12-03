@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
-import "./Parts.css";
+import "../Styles/Pages.css";
 import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
 import Table from "react-bootstrap/Table";
@@ -37,22 +37,22 @@ function Parts() {
             <thead>
               <tr>
                 <th>#</th>
-                <th>Machine Type</th>
-                <th>Brand</th>
-                <th>Color</th>
-                <th>Received Date</th>
-                <th>Customer Name</th>
+                <th>Barcode</th>
+                <th>Description</th>
+                <th>Unit price</th>
+                <th>Quantity</th>
+                <th>Discount</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Angle Grinder</td>
-                <td>Hugo</td>
-                <td>Red</td>
-                <td>10/11/2022</td>
-                <td>Suthakaran</td>
+                <td>TN121</td>
+                <td>Armature</td>
+                <td>7,500</td>
+                <td>10</td>
+                <td>10%</td>
                 <td>
                   <Button variant="contained" onClick={navigateToUpdateParts}>
                     <MdIcons.MdCreate />

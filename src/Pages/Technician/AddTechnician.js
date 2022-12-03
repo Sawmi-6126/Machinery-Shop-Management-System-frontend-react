@@ -5,14 +5,13 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import "../Styles/Pages.css";
 import * as MdIcons from "react-icons/md";
-import * as FaIcons from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-function UpdateParts() {
+function AddTechnician() {
   const navigate = useNavigate();
 
-  const navigateToParts = () => {
-    navigate("/parts");
+  const navigateToTechnician = () => {
+    navigate("/technician");
   };
 
   return (
@@ -20,44 +19,68 @@ function UpdateParts() {
       <section className="section">
         <div className="col-md-6">
           <h5>
-            <FaIcons.FaToolbox /> &nbsp;
-            <b> Inventory </b>
+            <MdIcons.MdManageAccounts /> &nbsp;
+            <b>Technician</b>
           </h5>
           <hr />
         </div>
         <Form>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>Barcode</Form.Label>
+              <Form.Label>Name</Form.Label>
               <Form.Control type="email" placeholder="" />
             </Form.Group>
+
             <Form.Group as={Col} controlId="formGridPassword">
-              <Form.Label>Description</Form.Label>
+              <Form.Label>NIC</Form.Label>
               <Form.Control type="password" placeholder="" />
             </Form.Group>
           </Row>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>Unit Price</Form.Label>
+              <Form.Label>Mobile No.</Form.Label>
               <Form.Control type="email" placeholder="" />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridPassword">
-              <Form.Label>Quantity</Form.Label>
-              <Form.Control type="password" placeholder="" />
+              <Form.Label>Appointment Type</Form.Label>
+              <Form.Select aria-label="Default select example">
+                <option></option>
+                <option value="permanent">Permanent</option>
+                <option value="temporary">Temporary</option>
+              </Form.Select>
             </Form.Group>
           </Row>
           <Row className="mb-3">
+            <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Label>EPF No</Form.Label>
+              <Form.Control type="email" placeholder="" />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formGridPassword">
+              <Form.Label>Basic Salary</Form.Label>
+              <Form.Control type="password" placeholder="" />
+            </Form.Group>
+          </Row>
+          <Row>
             <Form.Group className="mb-3" controlId="formGridAddress2">
-              <Form.Label>Discount </Form.Label>
+              <Form.Label>Address </Form.Label>
               <Form.Control placeholder="" />
             </Form.Group>
           </Row>
-          <Button variant="primary" type="submit" onClick={navigateToParts}>
-            Update
+          <Button
+            variant="primary"
+            type="submit"
+            onClick={navigateToTechnician}
+          >
+            Save
           </Button>
           &nbsp;
-          <Button variant="secondary" type="submit" onClick={navigateToParts}>
+          <Button
+            variant="secondary"
+            type="submit"
+            onClick={navigateToTechnician}
+          >
             Cancel
           </Button>
         </Form>
@@ -66,4 +89,4 @@ function UpdateParts() {
   );
 }
 
-export default UpdateParts;
+export default AddTechnician;

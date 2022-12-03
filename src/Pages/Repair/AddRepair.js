@@ -7,11 +7,11 @@ import "../Styles/Pages.css";
 import * as MdIcons from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
-function AddCustomer() {
+function AddRepair() {
   const navigate = useNavigate();
 
-  const navigateToCustomer = () => {
-    navigate("/customer");
+  const navigateToParts = () => {
+    navigate("/parts");
   };
 
   return (
@@ -20,46 +20,44 @@ function AddCustomer() {
         <div className="col-md-6">
           <h5>
             <MdIcons.MdPersonAddAlt1 /> &nbsp;
-            <b>Add New Customer</b>
+            <b>Add New Task</b>
           </h5>
           <hr />
         </div>
         <Form>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>First Name</Form.Label>
-              <Form.Control type="email" placeholder="Sawmika" />
+              <Form.Label>Job Id</Form.Label>
+              <Form.Control type="email" placeholder="" />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridPassword">
-              <Form.Label>Last Name</Form.Label>
-              <Form.Control type="password" placeholder="Suthakaran" />
+              <Form.Label>Machine</Form.Label>
+              <Form.Control type="password" placeholder="" />
             </Form.Group>
           </Row>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>Mobile No.</Form.Label>
-              <Form.Control type="email" placeholder="07x xxxxxxx" />
+              <Form.Label>Technician</Form.Label>
+              <Form.Control type="email" placeholder="" />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridPassword">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="password" placeholder="abc@gmail.com" />
+              <Form.Label>Status</Form.Label>
+              <Form.Control type="password" placeholder="" />
             </Form.Group>
           </Row>
-          <Form.Group className="mb-3" controlId="formGridAddress2">
-            <Form.Label>Address </Form.Label>
-            <Form.Control placeholder="Enter address here." />
-          </Form.Group>
-          <Button variant="primary" type="submit" onClick={navigateToCustomer}>
-            Submit
+          <Row>
+            <Form.Group className="mb-3" controlId="formGridAddress2">
+              <Form.Label>Repair Date </Form.Label>
+              <Form.Control type="Date" placeholder="" />
+            </Form.Group>
+          </Row>
+          <Button variant="primary" type="submit" onClick={navigateToParts}>
+            Save
           </Button>
           &nbsp;
-          <Button
-            variant="secondary"
-            type="submit"
-            onClick={navigateToCustomer}
-          >
+          <Button variant="secondary" type="submit" onClick={navigateToParts}>
             Cancel
           </Button>
         </Form>
@@ -68,4 +66,4 @@ function AddCustomer() {
   );
 }
 
-export default AddCustomer;
+export default AddRepair;

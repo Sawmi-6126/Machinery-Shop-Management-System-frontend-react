@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
-import "./Customer.css";
+import "../Styles/Pages.css";
 import * as MdIcons from "react-icons/md";
 import Table from "react-bootstrap/Table";
 
@@ -57,98 +57,6 @@ function Customer() {
                     variant="contained"
                     onClick={navigateToUpdateCustomer}
                   >
-                    <MdIcons.MdCreate />
-                  </Button>{" "}
-                  &nbsp;
-                  <Button
-                    style={{
-                      padding: "5px",
-                      backgroundColor: "red",
-                    }}
-                    variant=""
-                  >
-                    <MdIcons.MdDelete />
-                  </Button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>0712548789</td>
-                <td>abc@gmail.com</td>
-                <td>hgfdsdfgh</td>
-                <td>
-                  <Button variant="contained">
-                    <MdIcons.MdCreate />
-                  </Button>{" "}
-                  &nbsp;
-                  <Button
-                    style={{
-                      padding: "5px",
-                      backgroundColor: "red",
-                    }}
-                    variant=""
-                  >
-                    <MdIcons.MdDelete />
-                  </Button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>0712548789</td>
-                <td>abc@gmail.com</td>
-                <td>hgfdsdfgh</td>
-                <td>
-                  <Button variant="contained">
-                    <MdIcons.MdCreate />
-                  </Button>{" "}
-                  &nbsp;
-                  <Button
-                    style={{
-                      padding: "5px",
-                      backgroundColor: "red",
-                    }}
-                    variant=""
-                  >
-                    <MdIcons.MdDelete />
-                  </Button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>0712548789</td>
-                <td>abc@gmail.com</td>
-                <td>hgfdsdfgh</td>
-                <td>
-                  <Button variant="contained">
-                    <MdIcons.MdCreate />
-                  </Button>{" "}
-                  &nbsp;
-                  <Button
-                    style={{
-                      padding: "5px",
-                      backgroundColor: "red",
-                    }}
-                    variant=""
-                  >
-                    <MdIcons.MdDelete />
-                  </Button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>0712548789</td>
-                <td>abc@gmail.com</td>
-                <td>hgfdsdfgh</td>
-                <td>
-                  <Button variant="contained">
                     <MdIcons.MdCreate />
                   </Button>{" "}
                   &nbsp;

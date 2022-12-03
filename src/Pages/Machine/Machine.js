@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
-import "./Machine.css";
+import "../Styles/Pages.css";
 import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
 import Table from "react-bootstrap/Table";

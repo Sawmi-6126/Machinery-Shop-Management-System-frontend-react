@@ -65,6 +65,9 @@ function Sidebar() {
           </ul>
         </nav>
       </IconContext.Provider>
+      <footer>
+        <div className="footer"></div>
+      </footer>
     </>
   );
 }

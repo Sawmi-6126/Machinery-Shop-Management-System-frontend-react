@@ -4,11 +4,10 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import "../Styles/Pages.css";
-import * as MdIcons from "react-icons/md";
 import * as FaIcons from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-function UpdateParts() {
+function UpdateTechnician() {
   const navigate = useNavigate();
 
   const navigateToParts = () => {
@@ -66,4 +65,4 @@ function UpdateParts() {
   );
 }
 
-export default UpdateParts;
+export default UpdateTechnician;

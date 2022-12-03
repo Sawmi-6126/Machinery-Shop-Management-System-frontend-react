@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
-import "./Machine.css";
+import "../Styles/Pages.css";
 import * as MdIcons from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
