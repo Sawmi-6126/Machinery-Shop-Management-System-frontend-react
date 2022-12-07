@@ -5,9 +5,6 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import Customer from "./Pages/Customer/Customer";
 import AddCustomer from "./Pages/Customer/AddCustomer";
 import UpdateCustomer from "./Pages/Customer/UpdateCustomer";
-import Machine from "./Pages/Machine/Machine";
-import AddMachine from "./Pages/Machine/AddMachine";
-import UpdateMachine from "./Pages/Machine/UpdateMachine";
 import Parts from "./Pages/Parts/Parts";
 import AddParts from "./Pages/Parts/AddParts";
 import UpdateParts from "./Pages/Parts/UpdateParts";
@@ -18,12 +15,16 @@ import UpdateTechnician from "./Pages/Technician/UpdateTechnician";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import Signup from "./Pages/Login/Signup";
 import Signin from "./Pages/Login/Signin";
+import AddRepair from "./Pages/Repair/AddRepair";
+import UpdateRepair from "./Pages/Repair/UpdateRepair";
+import Header from "./Components/Sidebar/Header";
 
 function App() {
   return (
     <div>
       <div>
         <Router>
+          {/* <Header /> */}
           <Sidebar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
@@ -33,13 +34,12 @@ function App() {
             <Route path="/customer" element={<Customer />} />
             <Route path="/addcustomer" element={<AddCustomer />} />
             <Route path="/updatecustomer" element={<UpdateCustomer />} />
-            <Route path="/machine" element={<Machine />} />
-            <Route path="/addmachine" element={<AddMachine />} />
-            <Route path="/updatemachine" element={<UpdateMachine />} />
             <Route path="/parts" element={<Parts />} />
             <Route path="/addparts" element={<AddParts />} />
             <Route path="/updateparts" element={<UpdateParts />} />
             <Route path="/repair" element={<Repair />} />
+            <Route path="/addrepair" element={<AddRepair />} />
+            <Route path="/updaterepair" element={<UpdateRepair />} />
             <Route path="/technician" element={<Technician />} />
             <Route path="/addtechnician" element={<AddTechnician />} />
             <Route path="/updatetechnician" element={<UpdateTechnician />} />

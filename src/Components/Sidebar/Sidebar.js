@@ -7,6 +7,7 @@ import "./Sidebar.css";
 import { IconContext } from "react-icons";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import Header from "./Header";
 
 function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
@@ -37,6 +38,7 @@ function Sidebar() {
           >
             Repair Management System
           </Typography>
+
           <Button color="info" onClick={navigateToSignin}>
             Login
           </Button>
@@ -52,6 +54,7 @@ function Sidebar() {
                 <AiIcons.AiOutlineClose />
               </Link>
             </li>
+
             {SidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
@@ -65,9 +68,9 @@ function Sidebar() {
           </ul>
         </nav>
       </IconContext.Provider>
-      <footer>
+      {/* <footer>
         <div className="footer"></div>
-      </footer>
+      </footer> */}
     </>
   );
 }

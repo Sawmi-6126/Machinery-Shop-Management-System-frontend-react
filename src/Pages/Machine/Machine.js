@@ -37,22 +37,20 @@ function Machine() {
             <thead>
               <tr>
                 <th>#</th>
+                <th>Machine Code</th>
                 <th>Machine Type</th>
                 <th>Brand</th>
                 <th>Color</th>
-                <th>Received Date</th>
-                <th>Customer Name</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>1</td>
+                <td>HG001-R</td>
                 <td>Angle Grinder</td>
                 <td>Hugo</td>
                 <td>Red</td>
-                <td>10/11/2022</td>
-                <td>Suthakaran</td>
                 <td>
                   <Button variant="contained" onClick={navigateToUpdateMachine}>
                     <MdIcons.MdCreate />

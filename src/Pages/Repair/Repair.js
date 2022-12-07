@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import "../Styles/Pages.css";
 import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
-import Table from "react-bootstrap/Table";
-import Form from "react-bootstrap/Form";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import axios from "axios";
 
 function Repair() {
   const navigate = useNavigate();
@@ -16,6 +22,20 @@ function Repair() {
   const navigateToUpdateRepair = () => {
     navigate("/updaterepair");
   };
+  const [repairList, setRepairList] = useState([]);
+
+  const deleteRepair = (id) => {
+    axios.delete(`http://localhost:3001/repair/${id}`).then(() => {
+      window.location.reload(false);
+    });
+  };
+
+  //React hook, get is used to fetch the data
+  useEffect(() => {
+    axios.get("http://localhost:3001/repair").then((allrepairs) => {
+      setRepairList(allrepairs.data);
+    });
+  }, []);
 
   return (
     <div className="page-content">
@@ -27,32 +47,75 @@ function Repair() {
           </h5>
           <hr></hr>
         </div>
+
         <div className="components">
           <Button variant="contained" onClick={navigateToAddNewRepair}>
             <MdIcons.MdAdd />
             Add New Repair Details
           </Button>
         </div>
-        <div className="search">
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="contained">Search</Button>
-          </Form>
-        </div>
+
         <div className="table-control">
+          {/* <TableContainer component={Paper}>
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Job_id</TableCell>
+                  <TableCell align="right">Customer Mobile</TableCell>
+                  <TableCell align="right"></TableCell>
+                  <TableCell align="right">Address</TableCell>
+                  <TableCell align="right">Email</TableCell>
+                  <TableCell align="right">Actions</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {repairList.map((repair, key) => (
+                  <TableRow
+                    key={key}
+                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                  >
+                    <TableCell component="th" scope="row">
+                      {repair.job_id}
+                    </TableCell>
+                    <TableCell align="right">{repair.l_name}</TableCell>
+                    <TableCell align="right">{repair.mobile}</TableCell>
+                    <TableCell align="right">{repair.address}</TableCell>
+                    <TableCell align="right">{repair.email}</TableCell>
+                    <TableCell align="right">
+                      <Button
+                        variant="contained"
+                        onClick={navigateToUpdateRepair}
+                      >
+                        <MdIcons.MdCreate />
+                      </Button>{" "}
+                      &nbsp;
+                      <Button
+                        style={{
+                          padding: "5px",
+                          backgroundColor: "red",
+                        }}
+                        variant=""
+                        onClick={() => deleteRepair(repair.id)}
+                      >
+                        <MdIcons.MdDelete />
+                      </Button>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer> */}
           <Table striped className="table">
             <thead>
               <tr>
                 <th>#</th>
-                <th>Job Id</th>
-                <th>Machine</th>
+                <th>Job_id</th>
+                <th>Customer Name</th>
+                <th>Type</th>
+                <th>Brand</th>
+                <th>Color</th>
+                <th>Received Date</th>
                 <th>Technician</th>
-                <th>Repair Date</th>
                 <th>Status</th>
                 <th>Actions</th>
               </tr>
@@ -60,11 +123,14 @@ function Repair() {
             <tbody>
               <tr>
                 <td>1</td>
-                <td>6234</td>
+                <td>4532</td>
+                <td>Sawmika</td>
                 <td>Drill</td>
-                <td>Thanuskaran</td>
-                <td>10/11/2022</td>
-                <td>On progress</td>
+                <td>Hugo</td>
+                <td>Red</td>
+                <td>12/12/2022</td>
+                <td>Thanu</td>
+                <td>On Progress</td>
                 <td>
                   <Button variant="contained" onClick={navigateToUpdateRepair}>
                     <MdIcons.MdCreate />

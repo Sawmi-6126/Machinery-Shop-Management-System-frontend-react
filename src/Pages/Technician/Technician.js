@@ -49,13 +49,13 @@ function Technician() {
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Angle Grinder</td>
-                <td>Hugo</td>
-                <td>Red</td>
-                <td>Part time</td>
+                <td>Thanu</td>
+                <td>994562321V</td>
+                <td>0754585365</td>
+                <td>Permanent</td>
                 <td>1257</td>
-                <td>500</td>
-                <td>Suthakaran</td>
+                <td>20,000</td>
+                <td>Colombo</td>
                 <td>
                   <Button
                     variant="contained"

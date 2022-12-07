@@ -28,29 +28,29 @@ function AddParts() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Barcode</Form.Label>
-              <Form.Control type="email" placeholder="" />
+              <Form.Control type="String" placeholder="" />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridPassword">
               <Form.Label>Description</Form.Label>
-              <Form.Control type="password" placeholder="" />
+              <Form.Control type="text" placeholder="" />
             </Form.Group>
           </Row>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Unit Price</Form.Label>
-              <Form.Control type="email" placeholder="" />
+              <Form.Control type="number" placeholder="" />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridPassword">
               <Form.Label>Quantity</Form.Label>
-              <Form.Control type="password" placeholder="" />
+              <Form.Control type="number" placeholder="" />
             </Form.Group>
           </Row>
           <Row>
             <Form.Group className="mb-3" controlId="formGridAddress2">
               <Form.Label>Discount </Form.Label>
-              <Form.Control placeholder="" />
+              <Form.Control placeholder="" type="number" />
             </Form.Group>
           </Row>
           <Button variant="primary" type="submit" onClick={navigateToParts}>

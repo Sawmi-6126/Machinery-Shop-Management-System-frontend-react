@@ -28,18 +28,18 @@ function AddTechnician() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Name</Form.Label>
-              <Form.Control type="email" placeholder="" />
+              <Form.Control type="text" placeholder="" />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridPassword">
               <Form.Label>NIC</Form.Label>
-              <Form.Control type="password" placeholder="" />
+              <Form.Control type="String" placeholder="" />
             </Form.Group>
           </Row>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Mobile No.</Form.Label>
-              <Form.Control type="email" placeholder="" />
+              <Form.Control type="String" placeholder="" />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridPassword">
@@ -54,18 +54,18 @@ function AddTechnician() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>EPF No</Form.Label>
-              <Form.Control type="email" placeholder="" />
+              <Form.Control type="String" placeholder="" />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridPassword">
               <Form.Label>Basic Salary</Form.Label>
-              <Form.Control type="password" placeholder="" />
+              <Form.Control type="Number" placeholder="" />
             </Form.Group>
           </Row>
           <Row>
             <Form.Group className="mb-3" controlId="formGridAddress2">
               <Form.Label>Address </Form.Label>
-              <Form.Control placeholder="" />
+              <Form.Control type="Number" placeholder="" />
             </Form.Group>
           </Row>
           <Button

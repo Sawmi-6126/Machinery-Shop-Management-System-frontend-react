@@ -27,16 +27,6 @@ function AddMachine() {
         <Form>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>Customer Mobile</Form.Label>
-              <Form.Control type="email" placeholder="" />
-            </Form.Group>
-            <Form.Group as={Col} controlId="formGridPassword">
-              <Form.Label>Customer Name</Form.Label>
-              <Form.Control type="password" placeholder="" />
-            </Form.Group>
-          </Row>
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Machine Type</Form.Label>
               <Form.Control type="email" placeholder="" />
             </Form.Group>
@@ -46,14 +36,15 @@ function AddMachine() {
               <Form.Control type="password" placeholder="" />
             </Form.Group>
           </Row>
-          <Row>
-            <Form.Group className="mb-3" controlId="formGridAddress2">
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Label>Machine Type</Form.Label>
+              <Form.Control type="email" placeholder="" />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formGridAddress2">
               <Form.Label>Color </Form.Label>
               <Form.Control placeholder="" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formGridAddress2">
-              <Form.Label>Received Date </Form.Label>
-              <Form.Control type="Date" placeholder="" />
             </Form.Group>
           </Row>
           <Button variant="primary" type="submit" onClick={navigateToMachine}>
