@@ -56,15 +56,18 @@ function Repair() {
         </div>
 
         <div className="table-control">
-          {/* <TableContainer component={Paper}>
+          <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead>
                 <TableRow>
                   <TableCell>Job_id</TableCell>
-                  <TableCell align="right">Customer Mobile</TableCell>
-                  <TableCell align="right"></TableCell>
-                  <TableCell align="right">Address</TableCell>
-                  <TableCell align="right">Email</TableCell>
+                  <TableCell align="right">Customer Name</TableCell>
+                  <TableCell align="right">Type</TableCell>
+                  <TableCell align="right">Brand</TableCell>
+                  <TableCell align="right">Color</TableCell>
+                  <TableCell align="right">Received Date</TableCell>
+                  <TableCell align="right">Technician</TableCell>
+                  <TableCell align="right">Status</TableCell>
                   <TableCell align="right">Actions</TableCell>
                 </TableRow>
               </TableHead>
@@ -80,6 +83,9 @@ function Repair() {
                     <TableCell align="right">{repair.l_name}</TableCell>
                     <TableCell align="right">{repair.mobile}</TableCell>
                     <TableCell align="right">{repair.address}</TableCell>
+                    <TableCell align="right">{repair.email}</TableCell>
+                    <TableCell align="right">{repair.email}</TableCell>
+                    <TableCell align="right">{repair.email}</TableCell>
                     <TableCell align="right">{repair.email}</TableCell>
                     <TableCell align="right">
                       <Button
@@ -104,8 +110,8 @@ function Repair() {
                 ))}
               </TableBody>
             </Table>
-          </TableContainer> */}
-          <Table striped className="table">
+          </TableContainer>
+          {/* <Table striped className="table">
             <thead>
               <tr>
                 <th>#</th>
@@ -148,7 +154,7 @@ function Repair() {
                 </td>
               </tr>
             </tbody>
-          </Table>
+          </Table> */}
         </div>
       </section>
     </div>

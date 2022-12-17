@@ -18,18 +18,21 @@ import Signin from "./Pages/Login/Signin";
 import AddRepair from "./Pages/Repair/AddRepair";
 import UpdateRepair from "./Pages/Repair/UpdateRepair";
 import Header from "./Components/Sidebar/Header";
+import Payment from "./Pages/Payment/Payment";
+import SidebarLayout from "./SidebarLayout";
 
 function App() {
   return (
     <div>
-      <div>
-        <Router>
-          {/* <Header /> */}
-          <Sidebar />
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/signin" exact element={<Signin />} />
-            <Route path="/signup" exact element={<Signup />} />
+      <Router>
+        <Routes>
+          {/* <Route path="/" element={<LandingPage />} /> */}
+          <Route path="/" exact element={<Signin />} />
+          <Route path="/signup" exact element={<Signup />} />
+        </Routes>
+
+        <Routes>
+          <Route element={<SidebarLayout />}>
             <Route path="/dashboard" exact element={<Dashboard />} />
             <Route path="/customer" element={<Customer />} />
             <Route path="/addcustomer" element={<AddCustomer />} />
@@ -43,9 +46,10 @@ function App() {
             <Route path="/technician" element={<Technician />} />
             <Route path="/addtechnician" element={<AddTechnician />} />
             <Route path="/updatetechnician" element={<UpdateTechnician />} />
-          </Routes>
-        </Router>
-      </div>
+            <Route path="/payment" element={<Payment />} />
+          </Route>
+        </Routes>
+      </Router>
     </div>
   );
 }

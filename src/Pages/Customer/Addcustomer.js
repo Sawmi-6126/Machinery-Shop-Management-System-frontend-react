@@ -24,8 +24,9 @@ function AddCustomer() {
     email: "",
   });
 
-  const addCustomer = () => {
+  const createCustomer = () => {
     axios.post("http://localhost:3001/customer", customer);
+    console.log(customer);
   };
 
   return (
@@ -40,11 +41,13 @@ function AddCustomer() {
         </div>
         <Form>
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Group as={Col} controlId="formBasicText">
               <Form.Label>First Name</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Sawmika"
+                name="f_name"
+                id="f_name"
                 value={customer.f_name}
                 onChange={(event) => {
                   setCustomer({ ...customer, f_name: event.target.value });
@@ -52,11 +55,13 @@ function AddCustomer() {
               />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} controlId="formBasicText">
               <Form.Label>Last Name</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Suthakaran"
+                name="l_name"
+                id="l_name"
                 value={customer.l_name}
                 onChange={(event) => {
                   setCustomer({ ...customer, l_name: event.target.value });
@@ -65,11 +70,13 @@ function AddCustomer() {
             </Form.Group>
           </Row>
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Group as={Col} controlId="formBasicText">
               <Form.Label>Mobile No.</Form.Label>
               <Form.Control
-                type="String"
+                type="Number"
                 placeholder="07x xxxxxxx"
+                name="mobile"
+                id="mobile"
                 value={customer.mobile}
                 onChange={(event) => {
                   setCustomer({ ...customer, mobile: event.target.value });
@@ -77,11 +84,13 @@ function AddCustomer() {
               />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="abc@gmail.com"
+                name="email"
+                id="email"
                 value={customer.email}
                 onChange={(event) => {
                   setCustomer({ ...customer, email: event.target.value });
@@ -94,13 +103,15 @@ function AddCustomer() {
             <Form.Control
               type="text"
               placeholder="Enter address here."
+              name="address"
+              id="address"
               value={customer.address}
               onChange={(event) => {
                 setCustomer({ ...customer, address: event.target.value });
               }}
             />
           </Form.Group>
-          <Button variant="primary" type="submit" onClick={addCustomer}>
+          <Button variant="primary" type="submit" onClick={createCustomer}>
             Save
           </Button>
           &nbsp;

@@ -15,7 +15,7 @@ function Sidebar() {
 
   const navigate = useNavigate();
   const navigateToSignin = () => {
-    navigate("/signin");
+    navigate("/");
   };
 
   const navigateToSignup = () => {
@@ -26,9 +26,9 @@ function Sidebar() {
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
         <div className="navbar">
-          <Link to="#" className="menu-bars">
+          {/* <Link to="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />
-          </Link>
+          </Link> */}
           <Typography
             variant="h5"
             component="div"
@@ -40,19 +40,24 @@ function Sidebar() {
           </Typography>
 
           <Button color="info" onClick={navigateToSignin}>
-            Login
+            Logout
           </Button>
-          <Button color="info" onClick={navigateToSignup}>
+          {/* <Button color="info" onClick={navigateToSignup}>
             Signup
-          </Button>
+          </Button> */}
         </div>
 
-        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+        <nav
+          className={
+            //sidebar ? "nav-menu active" :
+            "nav-menu"
+          }
+        >
           <ul className="nav-menu-items" onClick={showSidebar}>
             <li className="navbar-toggle">
-              <Link to="#" className="menu-bars">
+              {/* <Link to="#" className="menu-bars">
                 <AiIcons.AiOutlineClose />
-              </Link>
+              </Link> */}
             </li>
 
             {SidebarData.map((item, index) => {
