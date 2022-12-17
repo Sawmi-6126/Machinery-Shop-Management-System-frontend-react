@@ -1,10 +1,11 @@
 import React from "react";
+import "../Styles/Pages.css";
 
 function Dashboard() {
   return (
-    <div className="dashboard">
-      <h1> Hello </h1>
-    </div>
+    <>
+      <div className="dashboard-content">Dashboard</div>
+    </>
   );
 }
 
